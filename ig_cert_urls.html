@@ -47,19 +47,21 @@
   }
   .copy-btn {
     flex-shrink: 0;
-    background: #f0f0ec;
+    background: #2563eb;
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
     font-size: 13px;
     font-weight: 500;
-    color: #444;
+    color: #fff;
     cursor: pointer;
     transition: background 0.15s, color 0.15s;
     white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.5;
   }
-  .copy-btn:hover { background: #2563eb; color: #fff; }
-  .copy-btn.copied { background: #16a34a; color: #fff; }
+  .copy-btn:hover { background: #1d4ed8; color: #fff; }
 
   .copy-all-btn {
     display: block;
@@ -84,7 +86,7 @@
 <h1>IG 圖卡｜課程連結總整理</h1>
 <div class="hint">共 12 個連結，對應 6 張圖卡內所有課程</div>
 
-<button class="copy-all-btn" onclick="copyAll(this)">📋 一鍵複製全部連結</button>
+<button class="copy-all-btn" onclick="openAll(this)">🚀 一鍵開啟全部課程</button>
 
 <!-- Card 2 -->
 <div class="section">
@@ -92,23 +94,19 @@
 
   <div class="url-row">
     <div class="url-label">Google Gemini 教師認證</div>
-    <div class="url-text" id="u1">https://grow.google/intl/ALL_sg/ai-essentials/</div>
-    <button class="copy-btn" onclick="copy('u1',this)">複製</button>
+    <a class="copy-btn" href="https://grow.google/intl/ALL_sg/ai-essentials/" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Introduction to Generative AI（Google Cloud）</div>
-    <div class="url-text" id="u2">https://www.skills.google/paths/118/course_templates/539</div>
-    <button class="copy-btn" onclick="copy('u2',this)">複製</button>
+    <a class="copy-btn" href="https://www.skills.google/paths/118/course_templates/539" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Generative AI Explained（NVIDIA DLI）</div>
-    <div class="url-text" id="u3">https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1/</div>
-    <button class="copy-btn" onclick="copy('u3',this)">複製</button>
+    <a class="copy-btn" href="https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1/" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Canva AI in the Classroom</div>
-    <div class="url-text" id="u4">https://www.canva.com/design-school/courses/ai-in-the-classroom</div>
-    <button class="copy-btn" onclick="copy('u4',this)">複製</button>
+    <a class="copy-btn" href="https://www.canva.com/design-school/courses/ai-in-the-classroom" target="_blank" rel="noopener">傳送</a>
   </div>
 </div>
 
@@ -118,23 +116,19 @@
 
   <div class="url-row">
     <div class="url-label">IBM AI Fundamentals（SkillsBuild）</div>
-    <div class="url-text" id="u5">https://skillsbuild.org/</div>
-    <button class="copy-btn" onclick="copy('u5',this)">複製</button>
+    <a class="copy-btn" href="https://skillsbuild.org/" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Microsoft × LinkedIn Career Essentials in Gen AI</div>
-    <div class="url-text" id="u6">https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin</div>
-    <button class="copy-btn" onclick="copy('u6',this)">複製</button>
+    <a class="copy-btn" href="https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">AWS AI 人才就緒計畫</div>
-    <div class="url-text" id="u7">https://pages.awscloud.com/tw-aws-generative-ai-learning-program</div>
-    <button class="copy-btn" onclick="copy('u7',this)">複製</button>
+    <a class="copy-btn" href="https://pages.awscloud.com/tw-aws-generative-ai-learning-program" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Google Generative AI 課程認證</div>
-    <div class="url-text" id="u8">https://www.skills.google/course_templates/536</div>
-    <button class="copy-btn" onclick="copy('u8',this)">複製</button>
+    <a class="copy-btn" href="https://www.skills.google/course_templates/536" target="_blank" rel="noopener">傳送</a>
   </div>
 </div>
 
@@ -144,23 +138,19 @@
 
   <div class="url-row">
     <div class="url-label">Hugging Face Agents Course</div>
-    <div class="url-text" id="u9">https://huggingface.co/learn/agents-course</div>
-    <button class="copy-btn" onclick="copy('u9',this)">複製</button>
+    <a class="copy-btn" href="https://huggingface.co/learn/agents-course" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Hugging Face LLM Course</div>
-    <div class="url-text" id="u10">https://huggingface.co/learn/llm-course</div>
-    <button class="copy-btn" onclick="copy('u10',this)">複製</button>
+    <a class="copy-btn" href="https://huggingface.co/learn/llm-course" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">DeepLearning.AI Agentic AI 課程</div>
-    <div class="url-text" id="u11">https://learn.deeplearning.ai/courses/agentic-ai</div>
-    <button class="copy-btn" onclick="copy('u11',this)">複製</button>
+    <a class="copy-btn" href="https://learn.deeplearning.ai/courses/agentic-ai" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Building RAG Agents with LLMs（NVIDIA DLI）</div>
-    <div class="url-text" id="u12">https://courses.nvidia.com/courses/course-v1:DLI+S-FX-15+V1/</div>
-    <button class="copy-btn" onclick="copy('u12',this)">複製</button>
+    <a class="copy-btn" href="https://courses.nvidia.com/courses/course-v1:DLI+S-FX-15+V1/" target="_blank" rel="noopener">傳送</a>
   </div>
 </div>
 
@@ -170,50 +160,37 @@
 
   <div class="url-row">
     <div class="url-label">Elements of AI（赫爾辛基大學）</div>
-    <div class="url-text" id="u13">https://www.elementsofai.com/</div>
-    <button class="copy-btn" onclick="copy('u13',this)">複製</button>
+    <a class="copy-btn" href="https://www.elementsofai.com/" target="_blank" rel="noopener">傳送</a>
   </div>
   <div class="url-row">
     <div class="url-label">Microsoft AI Learning Hub</div>
-    <div class="url-text" id="u14">https://learn.microsoft.com/en-us/ai/</div>
-    <button class="copy-btn" onclick="copy('u14',this)">複製</button>
+    <a class="copy-btn" href="https://learn.microsoft.com/en-us/ai/" target="_blank" rel="noopener">傳送</a>
   </div>
 </div>
 
 <script>
-function copy(id, btn) {
-  const text = document.getElementById(id).textContent.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ 已複製';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '複製'; btn.classList.remove('copied'); }, 2000);
-  });
-}
+const ALL_URLS = [
+  'https://grow.google/intl/ALL_sg/ai-essentials/',
+  'https://www.skills.google/paths/118/course_templates/539',
+  'https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1/',
+  'https://www.canva.com/design-school/courses/ai-in-the-classroom',
+  'https://skillsbuild.org/',
+  'https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin',
+  'https://pages.awscloud.com/tw-aws-generative-ai-learning-program',
+  'https://www.skills.google/course_templates/536',
+  'https://huggingface.co/learn/agents-course',
+  'https://huggingface.co/learn/llm-course',
+  'https://learn.deeplearning.ai/courses/agentic-ai',
+  'https://courses.nvidia.com/courses/course-v1:DLI+S-FX-15+V1/',
+  'https://www.elementsofai.com/',
+  'https://learn.microsoft.com/en-us/ai/',
+];
 
-function copyAll(btn) {
-  const ids = ['u1','u2','u3','u4','u5','u6','u7','u8','u9','u10','u11','u12','u13','u14'];
-  const labels = [
-    'Google Gemini 教師認證',
-    'Introduction to Generative AI（Google Cloud）',
-    'Generative AI Explained（NVIDIA DLI）',
-    'Canva AI in the Classroom',
-    'IBM AI Fundamentals（SkillsBuild）',
-    'Microsoft × LinkedIn Career Essentials in Gen AI',
-    'AWS AI 人才就緒計畫',
-    'Google Generative AI 課程認證',
-    'Hugging Face Agents Course',
-    'Hugging Face LLM Course',
-    'DeepLearning.AI Agentic AI 課程',
-    'Building RAG Agents with LLMs（NVIDIA DLI）',
-    'Elements of AI（赫爾辛基大學）',
-    'Microsoft AI Learning Hub',
-  ];
-  const lines = ids.map((id, i) => `${labels[i]}\n${document.getElementById(id).textContent.trim()}`);
-  navigator.clipboard.writeText(lines.join('\n\n')).then(() => {
-    btn.textContent = '✓ 全部已複製！';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '📋 一鍵複製全部連結'; btn.classList.remove('copied'); }, 2500);
-  });
+function openAll(btn) {
+  ALL_URLS.forEach(url => window.open(url, '_blank', 'noopener'));
+  btn.textContent = '✓ 已全部開啟！';
+  btn.classList.add('copied');
+  setTimeout(() => { btn.textContent = '🚀 一鍵開啟全部課程'; btn.classList.remove('copied'); }, 2500);
 }
 </script>
 </body>
