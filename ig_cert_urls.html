@@ -86,7 +86,7 @@
 <h1>IG 圖卡｜課程連結總整理</h1>
 <div class="hint">共 12 個連結，對應 6 張圖卡內所有課程</div>
 
-<button class="copy-all-btn" onclick="openAll(this)">🚀 一鍵開啟全部課程</button>
+<button class="copy-all-btn" onclick="copyAll(this)">📋 一鍵複製全部連結</button>
 
 <!-- Card 2 -->
 <div class="section">
@@ -186,11 +186,29 @@ const ALL_URLS = [
   'https://learn.microsoft.com/en-us/ai/',
 ];
 
-function openAll(btn) {
-  ALL_URLS.forEach(url => window.open(url, '_blank', 'noopener'));
-  btn.textContent = '✓ 已全部開啟！';
-  btn.classList.add('copied');
-  setTimeout(() => { btn.textContent = '🚀 一鍵開啟全部課程'; btn.classList.remove('copied'); }, 2500);
+function copyAll(btn) {
+  const labels = [
+    'Google Gemini 教師認證',
+    'Introduction to Generative AI（Google Cloud）',
+    'Generative AI Explained（NVIDIA DLI）',
+    'Canva AI in the Classroom',
+    'IBM AI Fundamentals（SkillsBuild）',
+    'Microsoft × LinkedIn Career Essentials in Gen AI',
+    'AWS AI 人才就緒計畫',
+    'Google Generative AI 課程認證',
+    'Hugging Face Agents Course',
+    'Hugging Face LLM Course',
+    'DeepLearning.AI Agentic AI 課程',
+    'Building RAG Agents with LLMs（NVIDIA DLI）',
+    'Elements of AI（赫爾辛基大學）',
+    'Microsoft AI Learning Hub',
+  ];
+  const text = ALL_URLS.map((url, i) => `${labels[i]}\n${url}`).join('\n\n');
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ 全部已複製！';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '📋 一鍵複製全部連結'; btn.classList.remove('copied'); }, 2500);
+  });
 }
 </script>
 </body>
